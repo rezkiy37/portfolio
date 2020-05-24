@@ -1,0 +1,107 @@
+// main: ../style.less
+
+.portfolio {
+    padding-top: 39px;
+
+    @media (max-width: 425px) {
+        padding-top: 30px;
+    }
+}
+
+.portfolio__title {
+    margin-bottom: 25px;
+
+    color: @grey;
+    font-size: 2.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    @media (max-width: 425px) {
+        font-size: 2.5rem;
+    }
+
+    @media (max-width: 375px) {
+        font-size: 2.2rem;
+    }
+}
+
+.works {
+    width: 100%;
+    height: auto;
+
+    margin: 0 -15px;
+
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    @media @tablet {
+        margin: 0;
+    }
+}
+
+.work__line {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    position: relative;
+}
+
+.work__column {
+    width: 50%;
+
+    padding: 15px;
+
+    @media @tablet {
+        width: 100%;
+
+        padding: 5px;
+    }
+}
+
+.work__item {
+    overflow: hidden;
+
+    cursor: pointer;
+
+    border-radius: 10px;
+    box-shadow: 0 0 4px fade(@black, 25%);
+
+    transition: box-shadow .12s linear;
+
+    &:hover {
+        box-shadow: 0 0 4px fade(@black, 75%);
+    }
+}
+
+.work__content {
+    padding: 18px;
+}
+
+.work__category {
+    font-size: .8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.work__text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.work__title {
+    font-size: 1.06rem;
+}
+
+.work__time {
+    font-size: 1.06rem;
+    font-weight: bold;
+}
+
+
+
+
+

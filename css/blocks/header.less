@@ -1,0 +1,297 @@
+// main: ../style.less
+
+.header {
+    width: 100%;
+    height: auto;
+
+    padding: .5rem 0;
+
+    box-shadow: 1px 2px 4px @grey;
+
+    background-color: @white;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header__inner {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.owner {
+    display: flex;
+    align-items: center;
+}
+
+.owner__avatar {
+    width: 75px;
+    height: 75px;
+
+    cursor: pointer;
+
+    img {
+        width: 100%;
+        height: 100%;
+
+        border-radius: 50%;
+
+        transition: transform .15s linear;
+
+        &:hover {
+            -webkit-transform: scale(1.07);
+            -ms-transform: scale(1.07);
+            transform: scale(1.07);
+        }
+    }
+}
+
+.owner__content {
+    padding-left: 9px;
+}
+
+.owner__name {
+    padding-bottom: 1px;
+
+    font-size: 1.06rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.owner__office {
+    margin-top: 0.06rem;
+
+    color: fade(@black, 70);
+    font-size: .8rem;
+}
+
+.header__nav {
+    @media @laptop {
+        display: none;
+    }
+}
+
+.nav__mobile {
+    width: 100%;
+    height: auto;
+
+    padding: 20px 20px;
+
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    text-align: center;
+
+    position: absolute;
+    top: 100%;
+    left: -150%;
+    z-index: 1;
+
+    transition: left .3s linear;
+
+    box-shadow: 1px 2px 4px @grey;
+
+    background-color: @white;
+
+
+    @media @laptop {
+        display: flex;
+    }
+}
+
+.nav__link {
+    margin-right: 45px;
+
+    color: @black;
+    font-size: .93rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    position: relative;
+
+
+    &:after {
+        content: '';
+        width: 0;
+        height: 2px;
+
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        z-index: 1;
+
+        background-color: @black;
+
+        transition: width .2s cubic-bezier(0, 0, .39, 1.12);
+    }
+
+    &:hover:not(.btn),
+    &.active:not(.btn) {
+        &:after {
+            width: 100%;
+        }
+    }
+
+
+    &--mobile {
+        width: 100%;
+
+        margin: 0 auto;
+        margin-bottom: 5px;
+        padding: 5px;
+
+        &:nth-child(4) {
+            margin-bottom: 10px;
+        }
+
+        &:after {
+            transition: width .3s linear
+        }
+
+        &:hover:not(.btn),
+        &.active:not(.btn) {
+        &:after {
+            width: 100%;
+            }
+        }
+    }
+}
+
+.burger {
+    display: none;
+
+    padding: 20px 10px;
+
+    color: transparent;
+    font-size: 0;
+
+    border: 0;
+    background: none;
+
+    cursor: pointer;
+
+    @media @laptop {
+        display: block;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover .burger__item:not(.used):before {
+        top: -7px;
+    }
+
+    &:hover .burger__item:not(.used):after {
+        top: 7px;
+    }
+
+    &:active .burger__item:not(.used):before {
+        top: 0;
+    }
+
+    &:active .burger__item:not(.used):after {
+        top: 0;
+    }
+
+    &:hover .used {
+        -webkit-transform: scale(.9) rotate(45deg);
+        -ms-transform: scale(.9) rotate(45deg);
+        transform: scale(.9) rotate(45deg);
+    }
+
+    &:active .used {
+        -webkit-transform: scale(.8) rotate(0deg);
+        -ms-transform: scale(.8) rotate(0deg);
+        transform: scale(.8) rotate(0deg);
+    }
+
+    &:active .used:before {
+        transform: rotate(0deg);
+    }
+}
+
+.burger__item {
+
+    width: 30px;
+    height: 3px;
+
+    display: block;
+
+    background-color: @grey;
+
+    position: relative;
+
+    &:before, &:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: -8px;
+    left: 0;
+    z-index: 1;
+
+    background-color: @grey;
+
+    transition: top .05s linear;
+    }
+
+    &:after {
+        top: 8px;
+    }
+
+}
+
+.used {
+    width: 30px;
+    height: 3px;
+
+    display: block;
+
+    background-color: @grey;
+
+    position: relative;
+
+    transform: rotate(0deg);
+
+    transition: transform .1s linear;
+
+    &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    transform: rotate(90deg);
+
+    background-color: @grey;
+
+    transition: transform .1s linear;
+
+    }
+
+    &:after {
+        width: 0;
+
+    }
+
+}
+
+.rotate {
+    transform: rotate(45deg)
+}
+
+

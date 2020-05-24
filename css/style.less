@@ -1,0 +1,108 @@
+// compress: false, sourceMap: true
+
+@import "less/vars";
+
+/* Basic Sattings */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+
+    position: relative;
+
+    color: @black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+
+    &.no-scroll {
+        margin: 0;
+        overflow: hidden;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.sprite {
+    display: none;
+}
+
+.text-center {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.text-right {
+    width: 100%;
+    height: auto;
+    text-align: right;
+}
+
+.hidden {
+    display: none;
+
+    &-scale {
+        position: absolute;
+        top: 0;
+        left: 150%;
+        z-index: 1;
+
+        transition: all .35s linear;
+    }
+
+    &-scale_left {
+        position: absolute;
+        top: 0;
+        left: -150%;
+        z-index: 1;
+
+        transition: all .35s linear;
+    }
+}
+
+.static {
+    position: static;
+}
+
+/* Vendors */
+@import "vendors/slick";
+
+/* Blocks */
+@import "blocks/load";
+@import "blocks/scroll-bar";
+@import "blocks/conteiner";
+@import "blocks/button";
+@import "blocks/header";
+@import "blocks/intro";
+@import "blocks/portfolio";
+@import "blocks/about";
+@import "blocks/review";
+@import "blocks/news";
+@import "blocks/footer";
+@import "blocks/modal";
+@import "blocks/modal-project";
+@import "blocks/modal-resume";
+@import "blocks/modal-contact";
+
+
+
+
+
+

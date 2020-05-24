@@ -1,0 +1,178 @@
+// main: ../style.less
+
+.intro {
+    padding-top: 105px;
+}
+
+.intro__inner {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid fade(@black, 30%);
+}
+
+.intro__content {
+    padding-right: 10px;
+}
+
+.intro__subtitle {
+    margin: 0 0 5px;
+    font-size: 2.13rem;
+    font-weight: 300;
+}
+
+.intro__title {
+    margin: 0 0 5px;
+    padding: 0;
+
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.intro__office {
+    color: fade(@grey, 70%);
+    font-size: 1.2rem;
+}
+
+.intro__social {
+    margin-top: 25px;
+
+    display: flex;
+
+}
+
+.social__item {
+    width: 40px;
+    height: 40px;
+
+    margin-left: 10px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 1px;
+
+    transition: transform .2s linear;
+
+    &:hover {
+        transform: translateY(-5px)
+    }
+
+    &:first-child {
+        margin-left: 0;
+
+        background-color: #13578A;
+
+        &:hover {
+            background-color: darken(#13578A, 5%);
+        }
+
+        &:active {
+            background-color: darken(#13578A, 10%);
+        }
+    }
+
+    &:nth-child(2) {
+        background-color: #3A5898;
+
+        &:hover {
+            background-color: darken(#3A5898, 5%);
+        }
+
+        &:active {
+            background-color: darken(#3A5898, 10%);
+        }
+    }
+
+    &:nth-child(3) {
+        background-color: #56ACEF;
+
+        &:hover {
+            background-color: darken(#56ACEF, 5%);
+        }
+
+        &:active {
+            background-color: darken(#56ACEF, 10%);
+        }
+    }
+
+}
+
+.social__svg {
+    width: auto;
+    height: 23px;
+
+    &:first-child {
+        fill: @white;
+    }
+
+    &:nth-child(2) {
+        fill: @white;
+    }
+
+    &:nth-child(3) {
+        fill: @white;
+    }
+}
+
+.intro__btn {
+    max-width: 410px;
+    height: auto;
+    margin-top: 42px;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.intro__photo {
+    height: 470px;
+    width: auto;
+
+    @media (max-width: 600px) {
+        height: 420px;
+    }
+}
+
+.intro__img {
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
